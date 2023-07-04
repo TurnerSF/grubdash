@@ -113,7 +113,7 @@ function update(req, res, next) {
     const { data: { id, deliverTo, mobileNumber, dishes, status } } = req.body;
     const { order } = res.locals;
   
-    if (id && orderId !== id) {
+    if (id && id !== orderId) {
       return next({
         status: 400,
         message: `The id in the request body (${id}) must match the orderId (${orderId}) in the route.`,
