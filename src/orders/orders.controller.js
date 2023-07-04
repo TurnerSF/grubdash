@@ -23,7 +23,7 @@ function validateDataExists(req, res, next) {
   }
 }
 
-function validator(field) {
+/*function validator(field) {
   return function (req, res, next) {
     if (req.body.data[field]) {
       next();
@@ -35,6 +35,7 @@ function validator(field) {
     }
   };
 }
+*/
 
 function newOrderValidator(req, res, next) {
   const { data: { deliverTo, mobileNumber, dishes } = {} } = req.body;
